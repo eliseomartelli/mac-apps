@@ -1,0 +1,167 @@
+# vim:ft=yaml.ansible
+---
+- name: "Ensure window movement with cmd + drag is enabled"
+  ansible.builtin.osx_defaults:
+    host: currentHost
+    type: bool
+    state: present
+    key: NSWindowShouldDragOnGesture
+    value: true
+
+- name: "Ensure dock gets out of the way asap"
+  ansible.builtin.osx_defaults:
+    type: float
+    state: present
+    domain: com.apple.dock
+    key: autohide-delay
+    value: 0
+
+- name: "Ensure dock is at left"
+  ansible.builtin.osx_defaults:
+    type: string
+    state: present
+    domain: com.apple.dock
+    key: orientation
+    value: left
+
+- name: "Ensure dock is static only"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: static-only
+    value: true
+
+- name: "Ensure dock animations are speedy"
+  ansible.builtin.osx_defaults:
+    type: float
+    state: present
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    value: 0.15
+
+- name: "Ensure dock icons are the right size"
+  ansible.builtin.osx_defaults:
+    type: int
+    state: present
+    domain: com.apple.dock
+    key: tilesize
+    value: 32
+
+- name: "Ensure dock shows hidden apps"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: showhidden
+    value: true
+
+- name: "Ensure dock auto hides"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: autohide
+    value: true
+
+- name: "Ensure ui is navigable with keyboard"
+  ansible.builtin.osx_defaults:
+    type: int
+    state: present
+    key: AppleKeyboardUIMode
+    value: 3
+
+- name: "Ensure finder uses list view"
+  ansible.builtin.osx_defaults:
+    type: string
+    state: present
+    domain: com.apple.finder
+    key: FXPreferredViewStyle
+    value: "Nlsv"
+
+- name: "Ensure finder shows the path"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    value: true
+
+- name: "Ensure dock supports scroll to open"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: scroll-to-open
+    value: true
+
+- name: "Ensure dock hides with scale"
+  ansible.builtin.osx_defaults:
+    type: string
+    state: present
+    domain: com.apple.dock
+    key: mineffect
+    value: "scale"
+
+- name: "Ensure textedit starts in plain text mode"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.TextEdit
+    key: RichText
+    value: false
+
+- name: "Ensure finder search scope is in current folder"
+  ansible.builtin.osx_defaults:
+    type: string
+    state: present
+    domain: com.apple.finder
+    key: FXDefaultSearchScope
+    value: "SCcf"
+
+- name: "Ensure trash gets emptied after 30 day"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.finder
+    key: FXRemoveOldTrashItems
+    value: true
+
+- name: "Ensure finder shows icon fast"
+  ansible.builtin.osx_defaults:
+    type: float
+    state: present
+    key: NSToolbarTitleViewRolloverDelay
+    value: 0
+
+- name: "Ensure mission control doesn't rearrange spaces"
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: mru-spaces
+    value: false
+
+- name: "Ensure trackpad is rightclickable"
+  ansible.builtin.osx_defaults:
+    type: int
+    state: present
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadCornerSecondaryClick
+    value: 2
+
+- name: "Ensure springing is enabled"
+  ansible.builtin.osx_defaults:
+    type: int
+    state: present
+    domain: Apple Global Domain
+    key: "com.apple.springing.enabled"
+    value: 1
+
+- name: "Ensure springing delay is at 0"
+  ansible.builtin.osx_defaults:
+    type: float
+    state: present
+    domain: Apple Global Domain
+    key: "com.apple.springing.delay"
+    value: 0

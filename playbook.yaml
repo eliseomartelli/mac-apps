@@ -1,0 +1,17 @@
+# vim:ft=yaml.ansible
+---
+- name: Install utilities
+  hosts: localhost
+  vars_files:
+    - "./homebrew_vars.yaml"
+    - "./mas_vars.yaml"
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+    - role: geerlingguy.mac.mas
+
+- name: Set defaults
+  hosts: localhost
+  tags: configure
+  roles:
+    - defaults

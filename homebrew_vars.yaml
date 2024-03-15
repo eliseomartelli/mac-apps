@@ -1,0 +1,73 @@
+homebrew_taps:
+  - name: "eliseomartelli/custom-fonts"
+    url: "git@github.com:eliseomartelli/homebrew-custom-fonts.git"
+  - name: "eliseomartelli/eliseomartelli"
+    url: git@github.com:eliseomartelli/homebrew-eliseomartelli.git
+  - name: "homebrew/cask-fonts"
+homebrew_installed_packages:
+  - ansible
+  - ansible-lint
+  - aria2
+  - butane
+  - colima
+  - docker
+  - kubectl
+  - python
+  - deno
+  - exiftool
+  - ffmpeg
+  - fzf
+  - fd
+  - gh
+  - gnupg
+  - rust
+  - composer
+  - php
+  - luarocks
+  - julia
+  - go
+  - lua
+  - neovim
+  - pandoc
+  - pinentry-mac
+  - platformio
+  - podman
+  - poppler
+  - prettier
+  - ripgrep-all
+  - stow
+  - ripgrep
+  - telnet
+  - texlive
+  - tmux
+  - tree
+  - watch
+  - wget
+  - yarn
+  - yt-dlp
+homebrew_cask_apps:
+  - adobe-creative-cloud
+  - coconutbattery
+  - discord
+  - figma
+  - ollama
+  - keka
+  - lulu
+  - maccy
+  - obs
+  - obs-websocket
+  - rectangle
+  - sf-symbols
+  - spark-ar-studio
+  - transmission
+  - utm
+  - font-abril-fatface
+  - font-alatsi
+  - font-allison
+  - font-amatic-sc
+  - font-belgro
+  - font-brown-rosemary
+  - font-cameron
+  - font-cormorant-garamond
+  - font-meslo-lg-nerd-font
+  - font-pix-chicago

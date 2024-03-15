@@ -1,0 +1,29 @@
+mas_installed_apps:
+  - id: 1440147259
+    name: AdGuard for Safari
+  - id: 497799835
+    name: Xcode
+  - id: 409183694
+    name: Keynote
+  - id: 1451685025
+    name: WireGuard
+  - id: 1463298887
+    name: Userscripts
+  - id: 1480933944
+    name: Vimari
+  - id: 1533805339
+    name: Keepa - Price Tracker
+  - id: 409201541
+    name: Pages
+  - id: 747648890
+    name: Telegram
+  - id: 1352778147
+    name: Bitwarden
+  - id: 409203825
+    name: Numbers
+  - id: 310633997
+    name: WhatsApp
+  - id: 462054704
+    name: Microsoft Word
+  - id: 462062816
+    name: Microsoft PowerPoint

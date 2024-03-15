@@ -18,6 +18,7 @@ To use these playbooks, follow these steps:
 3. Run the playbooks using the following command:
    - `ansible-playbook -K playbook.yaml`
 4. The playbooks will run and configure your macOS system accordingly.
+5. Install [dotfiles](https://github.com/eliseomartelli/dotfiles) with GNU Stow.
 
 ## License
 

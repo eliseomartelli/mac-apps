@@ -1,0 +1,23 @@
+# vim:ft=yaml.ansible
+---
+- name: Get current Terminal profile.
+  ansible.builtin.osx_defaults:
+    domain: com.apple.terminal
+    key: Default Window Settings
+    state: list
+  register: terminal_theme
+
+- name: Ensure Terminal profile is on the machine.
+  when: "'Personal' not in terminal_theme"
+  ansible.builtin.copy:
+    src: Personal.terminal
+    dest: /tmp/Personal.terminal
+    mode: "0700"
+
+- name: Ensure Terminal profile is added.
+  when: "'Personal' not in terminal_theme"
+  ansible.builtin.command:
+    argv:
+      - open
+      - "/tmp/Personal.terminal"
+  changed_when: "'Personal' not in terminal_theme"

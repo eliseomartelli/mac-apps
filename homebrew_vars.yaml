@@ -8,59 +8,56 @@ homebrew_installed_packages:
   - ansible
   - ansible-lint
   - aria2
-  - butane
   - colima
-  - docker
-  - kubectl
-  - python
+  - composer
   - deno
+  - docker
   - exiftool
+  - fd
   - ffmpeg
   - fzf
-  - fd
   - gh
   - gnupg
-  - rust
-  - composer
-  - php
-  - luarocks
-  - julia
   - go
+  - julia
+  - kubectl
   - lua
+  - luarocks
   - neovim
   - pandoc
+  - php
   - pinentry-mac
-  - platformio
-  - podman
-  - poppler
-  - prettier
+  - python
+  - ripgrep
   - ripgrep-all
   - stow
-  - ripgrep
-  - telnet
   - texlive
   - tmux
   - tree
   - watch
-  - wget
   - yarn
   - yt-dlp
 homebrew_cask_apps:
   - adobe-creative-cloud
+  - apparency
+  - calendr
   - coconutbattery
   - discord
   - figma
-  - ollama
   - keka
   - lulu
   - maccy
   - obs
   - obs-websocket
+  - ollama
   - rectangle
   - sf-symbols
   - spark-ar-studio
+  - suspicious-package
+  - tomatobar
   - transmission
   - utm
+  - webex-meetings
   - font-abril-fatface
   - font-alatsi
   - font-allison

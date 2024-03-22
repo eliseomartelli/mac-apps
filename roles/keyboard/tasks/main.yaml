@@ -1,0 +1,15 @@
+# vim:ft=yaml.ansible
+---
+- name: Copy launchd keyboard remap.
+  ansible.builtin.copy:
+    src: it.eliseomartelli.keyboard-remap.plist
+    dest: /Library/LaunchDaemons/it.eliseomartelli.keyboard-remap.plist
+    mode: "0644"
+    owner: root
+    group: wheel
+
+- name: Run launchd keyboard remap.
+  community.general.launchd:
+    name: /Library/LaunchDaemons/it.eliseomartelli.keyboard-remap.plist
+    state: started
+    enabled: true

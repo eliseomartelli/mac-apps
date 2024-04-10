@@ -1,0 +1,12 @@
+---
+- name: Restart Dock
+  command: killall Dock
+  ignore_errors: yes
+
+- name: Reset dock
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: static-only
+    value: false

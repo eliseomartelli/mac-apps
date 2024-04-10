@@ -31,6 +31,9 @@
     domain: com.apple.dock
     key: static-only
     value: true
+  notify:
+    - Restart dock
+    - Reset dock
 
 - name: Ensure Dock hides fast
   ansible.builtin.osx_defaults:

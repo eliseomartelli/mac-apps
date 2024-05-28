@@ -8,6 +8,16 @@
     key: NSWindowShouldDragOnGesture
     value: true
 
+- name: Ensure app switcher shows on all displays
+  ansible.builtin.osx_defaults:
+    type: bool
+    state: present
+    domain: com.apple.dock
+    key: appswitcher-all-displays
+    value: true
+  notify:
+    - Restart dock
+
 - name: Ensude dock delay is fast
   ansible.builtin.osx_defaults:
     type: float
